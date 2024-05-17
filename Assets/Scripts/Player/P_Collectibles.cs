@@ -42,6 +42,8 @@ namespace Player
             OnCollect -= OnCollectible;
         }
 
+        // Using a coroutine to give the player time for an item to be collected if they are running past
+        //  and not exactly on the object when they try to collect
         private void ClearCollectingStatus()
         {
             if (collectionCoroutine != null)
